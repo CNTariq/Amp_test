@@ -112,11 +112,34 @@ droop_y = 5 * slope + intercept
 droop_time = 5.0 - z[0]
 droop = (((y_val - droop_y)/y_val) * 100)/droop_time
 
-print("The 100% amplified voltage is " + str(y_val) + " volts. The 10% amplified voltage is " + str(0.1 * y_val) +
-      " volts. The delay time is " + str(tpc_x) + " ms. ")
-print("The 90% amplified voltage is " + str(0.9 * y_val) + " volts, and the rise time is " + str(rise_time) +
-      " ms. ")
-print("The droop is " + str(droop) + "%/ms. ")
-print("The slew rate is " + str(slew_rate_100pc) + " V/ms. ")
+print("""
+
+
+
+
+The 100% amplified voltage is 
+""" + str(y_val) + """ volts. 
+
+The 10% amplified voltage is 
+""" + str(0.1 * y_val) + """ volts. 
+
+The delay time is 
+""" + str(tpc_x) + """ ms. 
+""")
+
+print("""The 90% amplified voltage is 
+""" + str(0.9 * y_val) + """ volts. 
+
+The rise time is 
+""" + str(rise_time) + " ms. ")
+
+print("""
+The droop is 
+""" + str(droop) + """%/ms. 
+""")
+
+print("""The slew rate is 
+""" + str(slew_rate_100pc) + """ V/ms. 
+""")
 
 plt.show()
